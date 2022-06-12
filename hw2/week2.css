@@ -1,0 +1,706 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  width: calc(1366px - 280px);
+  margin: 0 auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* p {
+  font-size: 20px;
+}
+
+.banner {
+  background: url("https://hexschool.github.io/webLayoutTraining1st/chatTalker_images/bg_home.svg") no-repeat right;
+  height: 768px;
+}
+
+.banner small {
+  color: #56C4C5;
+  line-height: 26px;
+}
+
+.banner h1 {
+  font-size: 48px;
+  line-height: 70px;
+}
+
+.banner .pic img {
+  width: 532px;
+  height: 534px;
+}
+
+.block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav {
+  height: 88px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .logo {
+  width: 200px;
+  height: 40px;
+}
+
+nav a.price {
+  width: 136px;
+  background: #FF5D50;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 60px;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  line-height: 46px;
+  color: #221E1F;
+  margin-bottom: 16px;
+}
+
+section {
+  margin: 100px 0;
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.socialmedia ul {
+  margin-top: 48px;
+}
+
+.socialmedia ul li {
+  width: 240px;
+}
+
+.socialmedia .social_img {
+  text-align: center;
+}
+
+.socialmedia .social_img img {
+  width: 90px;
+  height: 90px;
+}
+
+.socialmedia .social_name {
+  text-align: center;
+  font-size: 24px;
+  line-height: 35px;
+  color: #221E1F;
+  margin: 24px 0;
+}
+
+.socialmedia .social_info {
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: #747474;
+}
+
+.service {
+  background: url("https://hexschool.github.io/webLayoutTraining1st/chatTalker_images/ball02.svg");
+  background-repeat: no-repeat;
+  background-position: 1300px bottom;
+}
+
+.service .subtitle {
+  font-size: 20px;
+  line-height: 29px;
+  text-align: center;
+}
+
+.service ul {
+  padding: 40px 0 80px 0;
+}
+
+.service ul li {
+  background: #fff;
+  border-radius: 12px;
+  width: 260px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.service .card_head img {
+  width: 260px;
+  height: 260px;
+  border-radius: 12px 12px 0 0;
+}
+
+.service .card_foot {
+  background: #fff;
+  border-radius: 0 0 12px 12px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  padding: 16px;
+}
+
+.service .card_foot .type {
+  line-height: 40px;
+  color: #56C4C5;
+}
+
+.service .card_foot .info {
+  color: #221E1F;
+}
+
+ul.card {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 50%;
+}
+
+ul.card li {
+  border-radius: 12px;
+  width: 230px;
+  height: 260px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 48px 36px;
+  margin: 0 20px 20px 0;
+}
+
+ul.card li .card_head {
+  width: 86px;
+  height: 86px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+ul.card li .card_head img {
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.info .title {
+  text-align: left;
+}
+
+.info ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.info ul li {
+  line-height: 26px;
+}
+
+.info a.price {
+  width: 136px;
+  background: #56C4C5;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 60px;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.feedback ul.cards {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 104px;
+}
+
+.feedback ul.cards li {
+  width: 352px;
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.feedback {
+  background: url("https://hexschool.github.io/webLayoutTraining1st/chatTalker_images/ball03.svg");
+  background-repeat: no-repeat;
+  background-position: 280px 40px;
+}
+
+.feedback .card_img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 32px;
+  top: -60px;
+}
+
+.feedback .card {
+  border-radius: 12px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 48px 32px 24px 32px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.feedback .card hr {
+  margin: 48px 0;
+  color: #DDDDDD;
+  background: #DDDDDD;
+}
+
+.feedback .card .card_body {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.feedback .card .card_foot_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.feedback .card .card_foot_block li {
+  width: 16px;
+  height: 10px;
+  margin: 0 4px;
+}
+
+.feedback .card .type {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.panigation {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.panigation li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #DDDDDD;
+  margin: 0 4px;
+}
+
+.panigation li.active {
+  width: 16px;
+  background: #FFD153;
+}
+
+.footer {
+  background: url("https://hexschool.github.io/webLayoutTraining1st/chatTalker_images/home_footer.svg") no-repeat;
+  height: 503px;
+  position: relative;
+  background-size: 100%;
+}
+
+.footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .title {
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  left: 0;
+}
+
+.footer a.price {
+  width: 136px;
+  background: #56C4C5;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 60px;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto;
+  position: absolute;
+  top: 76%;
+}
+
+.footer .copyright {
+  width: 100%;
+  height: 56px;
+  text-align: center;
+  background: #F5F5F5;
+  font-size: 16px;
+  line-height: 24px;
+  position: absolute;
+  padding: 16px 0;
+  bottom: 0;
+}
+
+.circle {
+  position: relative;
+}
+
+.circle img.circle_a {
+  width: 126px;
+  position: absolute;
+  left: -49px;
+  top: 122px;
+}
+
+.circle img.circle_b {
+  position: absolute;
+  right: -150px;
+  top: 60px;
+}
+
+/***************  mobile  ****************/
+@media only screen and (max-width: 376px) {
+  .container {
+    width: 334px;
+  }
+  ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav {
+    height: 72px;
+  }
+  nav .logo {
+    width: 131px;
+    height: 24px;
+  }
+  .banner {
+    background: url(https://hexschool.github.io/webLayoutTraining1st/chatTalker_images/bg_home_sm.svg) no-repeat;
+    background-position: bottom;
+    height: 245px;
+    height: auto;
+  }
+  .banner .logo img {
+    width: 130px;
+  }
+  .banner h1 {
+    font-size: 32px;
+    line-height: 46px;
+  }
+  .banner small,
+  .banner p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .block .pic {
+    background-position: center;
+    width: 304px;
+    height: 305px;
+  }
+  .block .pic img {
+    width: 304px;
+    height: 305px;
+  }
+  .title {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .socialmedia ul li {
+    width: 100%;
+    margin: 16px 0;
+  }
+  .socialmedia .social_img img {
+    width: 60px;
+    height: 60px;
+  }
+  .socialmedia .social_name {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    margin: 16px 0;
+  }
+  .socialmedia .social_info {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .service .subtitle {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .service ul {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .service ul li {
+    margin: 16px 0;
+  }
+  .circle img.circle_a {
+    width: 126px;
+    left: -49px;
+    top: 122px;
+  }
+  .service {
+    background-position: 287px bottom;
+    background-size: 135px;
+  }
+  .brand .block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .brand .info {
+    text-align: center;
+  }
+  .brand .info .title {
+    text-align: center;
+  }
+  .brand ul.card {
+    width: 230px;
+  }
+  .brand ul.card li {
+    height: 284px;
+  }
+  .brand .card_foot .type {
+    font-size: 18px;
+    line-height: 26px;
+    margin: 24px 0 20px 0;
+  }
+  .brand .card_foot .info {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+  .feedback {
+    background-position: -77px 60px;
+  }
+  .feedback ul.cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .feedback ul.cards li {
+    width: 335px;
+    display: none;
+  }
+  .feedback ul.cards li:first-child {
+    display: block;
+  }
+  .feedback .card_foot_block ul.starts {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .feedback ul.panigation {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .footer {
+    background: url(https://hexschool.github.io/webLayoutTraining1st/chatTalker_images/footer_sm.svg) no-repeat;
+  }
+  .footer .title {
+    font-size: 24px;
+    line-height: 35px;
+  }
+}
+/*# sourceMappingURL=week2.css.map */

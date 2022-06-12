@@ -1,0 +1,445 @@
+// reser.css
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+// --------
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300&display=swap');
+
+$primary:#3F5D45;
+$primary-light:#EAF0ED;
+
+* {
+    font-family: 'Noto Sans TC', sans-serif;
+    color: $primary;
+}
+
+a {
+    text-decoration: none;
+    color: $primary;
+    display: block;
+
+}
+
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+}
+
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+    .logo img {
+
+        width: 220px;
+
+    }
+
+    ul {
+        display: flex;
+
+        li {
+            width: 60px;
+            text-align: center;
+
+            &:last-child {
+                text-align: end;
+            }
+        }
+    }
+
+}
+
+.banner {
+    background: url('https://hexschool.github.io/webLayoutTraining1st/student-week1/banner.png') no-repeat center;
+    width: 940px;
+    height: 496px;
+
+}
+
+.block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.catrgory {
+    width: 300px;
+    text-align: center;
+
+
+    // background: $primary;
+    // color: $primary-light;
+    ul li {
+        border: 1px solid $primary-light;
+
+
+        &:first-child {
+            // background: $primary-light;
+            padding: 16px 64px;
+            background: $primary;
+            color: $primary-light;
+        }
+
+        &.active {
+            background: $primary-light;
+            color: $primary;
+        }
+
+        a {
+            padding: 16px 64px;
+
+            &:hover {
+                background: $primary-light;
+                color: $primary;
+            }
+        }
+    }
+}
+
+.product {
+    width: calc(100% - 300px);
+
+    ul.item {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            width: 300px;
+            position: relative;
+            margin: 0 0 20px 20px;
+        }
+    }
+
+    .item_head {
+        .label {
+            position: absolute;
+            writing-mode: vertical-lr;
+            background: $primary;
+            color: $primary-light;
+            padding: 10px;
+            left: 20px;
+            letter-spacing: 4px;
+        }
+
+        .like {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+        }
+    }
+
+
+    @mixin product($width) {
+        width: $width;
+        font-size: 20px;
+        line-height: 24px;
+        border: 1px solid $primary-light;
+        padding: 14px 0;
+    }
+
+
+    .item_foot {
+        display: flex;
+        text-align: center;
+
+        .product_name {
+            @include product(60%)
+        }
+
+        .product_price {
+            @include product(40%)
+        }
+    }
+
+
+    .addToCart {
+        text-align: center;
+        color: $primary;
+        background: $primary-light;
+        padding: 16px 0;
+    }
+
+    ul.panigation {
+        display: flex;
+        justify-content: end;
+        margin-bottom: 40px;
+    
+        li {
+            width: 60px;
+            height: 60px;
+            border: 1px solid $primary-light;
+            line-height: 60px;
+            text-align: center;
+            position: relative;
+    
+            img {
+                position: absolute;
+                // width: 24px;
+                // height: 24px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%)
+            }
+    
+            &.active {
+                background: $primary;
+    
+                a {
+                    color: $primary-light
+                }
+            }
+    
+        }
+    }
+    
+}
+
+
+
+
+.subscribe {
+    background: $primary;
+    padding: 30px 0;
+
+    img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .block_left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 200px;
+
+        p {
+            color: $primary-light
+        }
+    }
+
+    .block_right {
+        display: flex;
+        width: 380px;
+        height: 56px;
+        position: relative;
+
+        span {
+            position: absolute;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: url('https://hexschool.github.io/webLayoutTraining1st/student-week1/mail-24px.png') no-repeat;
+            left: 20px;
+            top: 16px;
+        }
+
+        input {
+            width: 316px;
+            height: 56px;
+            background: $primary-light;
+            border: none;
+            padding-left: 50px;
+            font-size: 16px;
+        }
+
+        .toSubscribe {
+            background: #FFE180;
+            width: 20px;
+            height: 20px;
+            padding: 19px 22px;
+        }
+
+
+    }
+
+
+}
+
+.footer {
+    padding: 40px 0;
+
+
+    .block_left {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 218px;
+
+        .footer_logo {
+            width: 172.22px;
+        }
+
+        .footer_contract li {
+            margin: 8px 0;
+        }
+    }
+
+
+    .block_right {
+        writing-mode: vertical-rl;
+        font-family: 'Noto Serif TC', serif;
+        font-size: 18px;
+        letter-spacing: 2px;
+        line-height: 24px;
+    }
+
+    .footer_info {
+
+        margin-top: 30px;
+        font-size: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        ul {
+            display: flex;
+
+            li {
+                width: 40px;
+            }
+        }
+
+        img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
